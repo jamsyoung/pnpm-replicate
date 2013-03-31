@@ -4,6 +4,10 @@
     "version": "0.0.1",
     "author": "James Young <jmeyoung@gmail.com>",
     "description": "Replicate one or more packages from npmjs.org to a private npm registry.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jamsyoung/pnpm-replicate.git"
+    },
     "bin": {
         "pnpm-replicate": "./pnpm-replicate.js"
     },
