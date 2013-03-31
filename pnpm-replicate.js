@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 /*jslint node: true, nomen: true */
 
-var packageConfig = require('./package.json'),
-    curlCommand,
+var curlCommand,
     targetHost,
     execSync = require('exec-sync'),
     colors = require('colors'),
