@@ -26,7 +26,7 @@ json.doc_ids = argv.id.split(',');
 
 targetHost = argv._ + '/_replicate';
 
-curlCommand = "curl -sH 'Content-Type: application/json' -X POST '" + targetHost + "' -d '" + JSON.stringify(json) + "'";
+curlCommand = "curl -sSH 'Content-Type: application/json' -X POST '" + targetHost + "' -d '" + JSON.stringify(json) + "'";
 
 console.log('[INFO] '.green + 'curl command that will be executed');
 console.log(curlCommand);
