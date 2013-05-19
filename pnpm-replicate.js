@@ -3,7 +3,7 @@
 
 var curlCommand,
     targetHost,
-    execSync = require('exec-sync'),
+    execSync = require('execSync'),
     colors = require('colors'),
     result,
     argv = require('optimist')
@@ -35,7 +35,7 @@ if (argv.dryrun) {
     process.exit();
 }
 
-result = execSync(curlCommand, true);
+result = execSync.exec(curlCommand);
 
 console.log('\n[INFO] '.green + 'Response');
 console.log(result.stdout);
