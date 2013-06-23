@@ -1,4 +1,6 @@
 # pnpm-replicate
+[![NPM version](https://badge.fury.io/js/pnpm-replicate.png)](http://badge.fury.io/js/pnpm-replicate)
+
 Replicate one or more packages from npmjs.org to a private npm registry.
 
 This is a comamnd line tool for groups that:
@@ -19,7 +21,7 @@ You may need to use `sudo` for this, depending on your environment setup.
 
 ## Usage
 
-    $ pnpm-replicate 
+    $ pnpm-replicate
     Usage: pnpm-replicate http[s]://your-private-registry[:port] --id package-name[,package-name] [--target dbname] [--dryrun]
 
     Options:
