@@ -14,8 +14,8 @@
     "main": "pnpm-replicate.js",
     "dependencies": {
         "execSync": "0.0.4",
-        "optimist": "0.4.0",
-        "colors": "0.6.0-1"
+        "optimist": "0.6.0",
+        "colors": "0.6.2"
     },
     "engines": {
         "node": ">=0.10.7"
