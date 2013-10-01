@@ -1,7 +1,7 @@
 {
     "name": "pnpm-replicate",
     "preferGlobal": true,
-    "version": "0.0.2",
+    "version": "0.1.0",
     "author": "James Young <jmeyoung@gmail.com>",
     "description": "Replicate one or more packages from npmjs.org to a private npm registry.",
     "repository": {
