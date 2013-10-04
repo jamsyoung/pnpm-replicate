@@ -8,3 +8,5 @@ Gruntfile.js
 code-coverage.html
 
 test/
+src/
+
