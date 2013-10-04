@@ -24,8 +24,8 @@ module.exports = function (grunt) {
                 options: {
                     errorsOnly: false,
                     cyclomatic: 1,
-                    halstead: 1,
-                    maintainability: 100
+                    halstead: 6,
+                    maintainability: 80
                 }
             },
             source: {
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                     errorsOnly: false,
                     cyclomatic: 1,
                     halstead: 1,
-                    maintainability: 100
+                    maintainability: 91
                 }
             }
         },
@@ -53,13 +53,7 @@ module.exports = function (grunt) {
                     captureFile: 'code-coverage.html'
                 },
                 src: ['test/**/*.js']
-            }//,
-            // 'travis-cov': {
-            //     options: {
-            //         reporter: 'travis-cov'
-            //     },
-            //     src: ['test/**/*.js']
-            // }
+            }
         },
         clean: {
             files: [
