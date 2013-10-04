@@ -1,0 +1,12 @@
+.editorconfig
+.gitignore
+.jshintrc
+.travis.yml
+
+ChangeLog.md
+Gruntfile.js
+code-coverage.html
+
+test/
+src/
+
