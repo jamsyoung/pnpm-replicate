@@ -6,8 +6,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         jshint: {
             files: [
-                'Gruntfile.js',
-                'pnpm-replicate.js',
+                '*.js',
+                'lib/*.js',
                 'test/**/*.js'
             ],
             options: {
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
                 }
             },
             source: {
-                src: ['pnpm-replicate.js'],
+                src: ['lib/*.js'],
                 options: {
                     errorsOnly: false,
                     cyclomatic: 1,
@@ -70,7 +70,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('coverage', ['mochaTest']);
 
-    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('test', ['jshint', 'complexity']);
 
     grunt.registerTask('default', ['test']);
 };

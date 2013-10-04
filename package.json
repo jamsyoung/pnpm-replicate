@@ -1,12 +1,12 @@
 {
     "name": "pnpm-replicate",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "James Young <jmeyoung@gmail.com>",
     "description": "Replicate one or more packages from npmjs.org to a private npm registry.",
     "preferGlobal": true,
-    "main": "pnpm-replicate.js",
+    "main": "pnpm-replicate-cli.js",
     "bin": {
-        "pnpm-replicate": "./pnpm-replicate.js"
+        "pnpm-replicate": "./pnpm-replicate-cli.js"
     },
     "repository": {
         "type": "git",

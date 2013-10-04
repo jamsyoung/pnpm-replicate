@@ -2,5 +2,5 @@
 
 require('blanket')({
     // Only files that match the pattern will be instrumented
-    pattern: '/src/'
+    pattern: '/lib/pnpm-replicate.js'
 });
