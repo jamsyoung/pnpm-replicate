@@ -1,29 +1,57 @@
 {
     "name": "pnpm-replicate",
-    "preferGlobal": true,
     "version": "0.1.0",
     "author": "James Young <jmeyoung@gmail.com>",
     "description": "Replicate one or more packages from npmjs.org to a private npm registry.",
+    "preferGlobal": true,
+    "main": "pnpm-replicate.js",
+    "bin": {
+        "pnpm-replicate": "./pnpm-replicate.js"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/jamsyoung/pnpm-replicate.git"
     },
-    "bin": {
-        "pnpm-replicate": "./pnpm-replicate.js"
+    "bugs": {
+        "url": "https://github.com/jamsyoung/pnpm-replicate/issues",
+        "email": "jmeyoung@gmail.com"
     },
-    "main": "pnpm-replicate.js",
+    "man": "./man/man1/pnpm-replicate.1",
+    "scripts": {
+        "build-man": "node_modules/.bin/marked-man src/man/man1/pnpm-replicate.1.md > man/man1/pnpm-replicate.1",
+        "test": "grunt test",
+        "travis-cov": {
+            "threshold": 100
+        }
+    },
     "dependencies": {
+        "colors": "0.6.2",
         "execSync": "0.0.4",
-        "optimist": "0.6.0",
-        "colors": "0.6.2"
+        "optimist": "0.6.0"
+    },
+    "devDependencies": {
+        "blanket": "1.1.5",
+        "chai": "1.7.2",
+        "grunt": "0.4.1",
+        "grunt-complexity": "0.1.3",
+        "grunt-contrib-clean": "0.5.0",
+        "grunt-contrib-jshint": "0.6.3",
+        "grunt-mocha-test": "0.6.3",
+        "marked-man": "0.0.2",
+        "mocha": "1.12.0",
+        "travis-cov": "0.2.4"
     },
     "engines": {
-        "node": ">=0.10.7"
+        "node": ">=0.10.13",
+        "npm": ">=1.3.2"
     },
     "keywords": [
         "pnpm",
         "replicate",
         "cli"
     ],
-    "license": "MIT"
+    "license": {
+        "type": "MIT",
+        "url": "https://github.com/jamsyoung/pnpm-replicate/blob/master/LICENSE.md"
+    }
 }

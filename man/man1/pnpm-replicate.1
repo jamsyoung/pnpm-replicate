@@ -1,0 +1,30 @@
+.TH "PNPM\-REPLICATE" "1" "October 2013" "" ""
+.SH "NAME"
+\fBpnpm-replicate\fR \- Private NPM Replicate
+.SH SYNOPSIS
+.P
+pnpm\-replicate http[s]://[username:password@]your\-private\-registry[:port] \-\-id package\-name[,package\-name] [\-\-target dbname] [\-\-dryrun]
+.SH DESCRIPTION
+.P
+\fBpnpm\-replicate\fR is a command line tool that will replicate one or more packages
+from npmjs\.org to a private npm registry\.
+.P
+The following options are available:
+.P
+\-\-id        A comma separated list of packages to replicate\.
+            Example: one,two,three
+.P
+\-\-target    The target database in your private registry to replicate to\.
+.br
+            Defaults to "registry"
+.P
+\-\-dryrun    Does not replicate\.  Displays the curl command that would be used\.
+.SH SEE ALSO
+.P
+https://github\.com/jamsyoung/pnpm\-replicate
+.P
+https://npmjs\.org/package/pnpm\-replicate
+.SH AUTHOR
+.P
+James Young jmeyoung@gmail\.com http://jamsyoung\.com
+
