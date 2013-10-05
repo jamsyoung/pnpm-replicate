@@ -6,8 +6,8 @@ module.exports = function (grunt) {
     grunt.initConfig({
         jshint: {
             files: [
-                'Gruntfile.js',
-                'pnpm-replicate.js',
+                '*.js',
+                'lib/*.js',
                 'test/**/*.js'
             ],
             options: {
@@ -23,18 +23,18 @@ module.exports = function (grunt) {
                 ],
                 options: {
                     errorsOnly: false,
-                    cyclomatic: 1,
+                    cyclomatic: 2,
                     halstead: 6,
                     maintainability: 80
                 }
             },
             source: {
-                src: ['pnpm-replicate.js'],
+                src: ['lib/*.js'],
                 options: {
                     errorsOnly: false,
                     cyclomatic: 1,
                     halstead: 1,
-                    maintainability: 91
+                    maintainability: 80
                 }
             }
         },
@@ -42,17 +42,9 @@ module.exports = function (grunt) {
             test: {
                 options: {
                     reporter: 'spec',
-                    require: 'test/coverage-blanket'
+                    require: 'test/mocha-setup'
                 },
-                src: ['test/*.js']
-            },
-            'html-cov': {
-                options: {
-                    reporter: 'html-cov',
-                    quiet: true,
-                    captureFile: 'code-coverage.html'
-                },
-                src: ['test/**/*.js']
+                src: ['test/mocha/*.js']
             }
         },
         clean: {
@@ -68,9 +60,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('coverage', ['mochaTest']);
-
-    grunt.registerTask('test', ['jshint']);
+    grunt.registerTask('test', ['jshint', 'complexity', 'mochaTest']);
 
     grunt.registerTask('default', ['test']);
 };
