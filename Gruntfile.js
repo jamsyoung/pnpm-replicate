@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                     errorsOnly: false,
                     cyclomatic: 1,
                     halstead: 1,
-                    maintainability: 91
+                    maintainability: 80
                 }
             }
         },
@@ -43,14 +43,6 @@ module.exports = function (grunt) {
                 options: {
                     reporter: 'spec',
                     require: 'test/mocha-setup'
-                },
-                src: ['test/mocha/*.js']
-            },
-            coverage: {
-                options: {
-                    reporter: 'html-cov',
-                    quiet: true,
-                    captureFile: 'code-coverage.html'
                 },
                 src: ['test/mocha/*.js']
             }
