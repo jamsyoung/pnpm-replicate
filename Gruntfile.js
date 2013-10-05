@@ -23,7 +23,7 @@ module.exports = function (grunt) {
                 ],
                 options: {
                     errorsOnly: false,
-                    cyclomatic: 1,
+                    cyclomatic: 2,
                     halstead: 6,
                     maintainability: 80
                 }
@@ -42,17 +42,17 @@ module.exports = function (grunt) {
             test: {
                 options: {
                     reporter: 'spec',
-                    require: 'test/coverage-blanket'
+                    require: 'test/mocha-setup'
                 },
-                src: ['test/*.js']
+                src: ['test/mocha/*.js']
             },
-            'html-cov': {
+            coverage: {
                 options: {
                     reporter: 'html-cov',
                     quiet: true,
                     captureFile: 'code-coverage.html'
                 },
-                src: ['test/**/*.js']
+                src: ['test/mocha/*.js']
             }
         },
         clean: {
@@ -68,9 +68,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('coverage', ['mochaTest']);
-
-    grunt.registerTask('test', ['jshint', 'complexity']);
+    grunt.registerTask('test', ['jshint', 'complexity', 'mochaTest']);
 
     grunt.registerTask('default', ['test']);
 };
