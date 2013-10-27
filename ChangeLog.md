@@ -1,5 +1,9 @@
 # ChangeLog
 
+## 0.1.2
+- updated dependencies
+
+
 ## 0.1.1
 - added cli wrapper to separate the shebang that blows up complxity and the
   main codebase

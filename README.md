@@ -4,9 +4,7 @@ Replicate one or more packages from npmjs.org to a private npm registry.
 [![Build Status](https://travis-ci.org/jamsyoung/pnpm-replicate.png)](https://travis-ci.org/jamsyoung/pnpm-replicate)
 [![NPM version](https://badge.fury.io/js/pnpm-replicate.png)](http://badge.fury.io/js/pnpm-replicate)
 [![Dependency Status](https://gemnasium.com/jamsyoung/pnpm-replicate.png)](https://gemnasium.com/jamsyoung/pnpm-replicate)
-
-[![NPM](https://nodei.co/npm/pnpm-replicate.png?downloads=true&stars=true)](https://nodei.co/npm/pnpm-replicate/)
-
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jamsyoung/pnpm-replicate/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This is a comamnd line tool for groups that:
 

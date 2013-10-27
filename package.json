@@ -1,6 +1,6 @@
 {
     "name": "pnpm-replicate",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "author": "James Young <jmeyoung@gmail.com>",
     "description": "Replicate one or more packages from npmjs.org to a private npm registry.",
     "preferGlobal": true,
@@ -19,30 +19,26 @@
     "man": "./man/man1/pnpm-replicate.1",
     "scripts": {
         "build-man": "node_modules/.bin/marked-man src/man/man1/pnpm-replicate.1.md > man/man1/pnpm-replicate.1",
-        "test": "grunt test",
-        "travis-cov": {
-            "threshold": 100
-        }
+        "test": "grunt test"
     },
     "dependencies": {
         "colors": "0.6.2",
-        "execSync": "0.0.4",
+        "execSync": "1.0.1-pre",
         "optimist": "0.6.0"
     },
     "devDependencies": {
-        "chai": "1.7.2",
+        "chai": "1.8.1",
         "grunt": "0.4.1",
         "grunt-complexity": "0.1.3",
         "grunt-contrib-clean": "0.5.0",
-        "grunt-contrib-jshint": "0.6.3",
-        "grunt-mocha-test": "0.6.3",
+        "grunt-contrib-jshint": "0.7.0",
+        "grunt-mocha-test": "0.7.0",
         "marked-man": "0.0.2",
-        "mocha": "1.12.0",
-        "travis-cov": "0.2.4"
+        "mocha": "1.13.0"
     },
     "engines": {
-        "node": ">=0.10.13",
-        "npm": ">=1.3.2"
+        "node": ">=0.10.21",
+        "npm": ">=1.3.11"
     },
     "keywords": [
         "pnpm",
