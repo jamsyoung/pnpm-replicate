@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "colors": "0.6.2",
-        "execSync": "1.0.1-pre",
+        "execSync": "0.0.4",
         "optimist": "0.6.0"
     },
     "devDependencies": {
